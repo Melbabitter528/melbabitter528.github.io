@@ -1,18 +1,19 @@
-# Site settings — edit these
+# Site settings
 title: Nathan's Blog
-description: Computers and what not
-url: "https://nathanpi8.github.io"
+email:
+description: "Computers and what not"
 baseurl: ""
-
-# Links
+url: "https://nathanpi8.github.io"
 github_username: nathanpi8
 
-# Build settings (GitHub Pages native)
+# Build settings
 markdown: kramdown
-highlighter: rouge
-permalink: /:year/:month/:title/
+permalink: pretty
 
+highlighter: rouge
 kramdown:
+  input: GFM
+  auto_ids: true
   syntax_highlighter: rouge
 
 exclude:

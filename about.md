@@ -2,6 +2,7 @@
 layout: page
 title: About
 permalink: /about/
+includelink: true
 ---
 
 Hi, I'm Nathan Paul. This is placeholder text — edit `about.md` in the repo
