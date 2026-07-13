@@ -4,11 +4,7 @@ description: Placeholder tagline — one line about what you write about.
 url: "https://nathanpi8.github.io"
 baseurl: ""                          # empty because the repo is named nathanpi8.github.io
 
-# Author / links shown on the homepage
-author:
-  name: Nathan Paul
-  email: nathanindumon@gmail.com
-twitter_username: yourhandle
+# Links
 github_username: nathanpi8
 
 # Build settings (GitHub Pages native)
