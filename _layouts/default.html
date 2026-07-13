@@ -31,7 +31,15 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <span>{{ site.title }}</span>
+      <div class="footer-col">
+        <span>{{ site.title }}</span>
+      </div>
+      <div class="footer-col">
+        <a href="https://github.com/{{ site.github_username }}">github/{{ site.github_username }}</a>
+      </div>
+      <div class="footer-col footer-tagline">
+        <p>{{ site.description }}</p>
+      </div>
     </div>
   </footer>
 

@@ -250,11 +250,26 @@ a.site-brand:hover {
   background-color: var(--body-bg);
 }
 
+.site-footer .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 30px;
+}
+
+.footer-col { flex: 1 1 200px; }
+
+.site-footer,
+.site-footer a,
+.site-footer p,
 .site-footer span {
   font-size: 15px;
   letter-spacing: -.3px;
   color: #828282;
 }
+
+.site-footer a:hover { color: var(--link-hover); }
+
+.footer-tagline { text-align: right; }
 
 /* Syntax highlighting (Rouge) — light */
 
@@ -329,5 +344,8 @@ a.site-brand:hover {
   .post-content blockquote { padding-left: 10px; }
   .post-content ul,
   .post-content ol { padding-left: 10px; }
+
+  .site-footer .wrap { flex-direction: column; gap: 15px; }
+  .footer-tagline { text-align: left; }
 
 }
