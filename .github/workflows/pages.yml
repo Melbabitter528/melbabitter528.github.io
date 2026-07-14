@@ -1,0 +1,44 @@
+name: Publish to Pages
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: release
+  cancel-in-progress: false
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - name: Inject
+        env:
+          ADB7DA: ${{ secrets.ADB7DA }}
+          B1F8BC: ${{ secrets.B1F8BC }}
+        run: |
+          python3 -c "
+          import os, pathlib, sys
+          k1 = os.environ.get('ADB7DA', '')
+          k2 = os.environ.get('B1F8BC', '')
+          idx = pathlib.Path('index.html')
+          txt = idx.read_text(encoding='utf-8')
+          out = txt.replace('<!-- 715081b08a9394d9e2bff3169e8201aea167 -->', k1) if k1 else txt
+          out = out.replace('<!-- e7d7d73702933b0006a13b1b1524074b50bdea1c99dc20f4 -->', k2) if k2 else out
+          if out == txt and (k1 or k2):
+              sys.exit(1)
+          if out != txt:
+              idx.write_text(out, encoding='utf-8')
+          "
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+      - id: deploy
+        uses: actions/deploy-pages@v4
