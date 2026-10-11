@@ -18,9 +18,10 @@ Push changes to `main` to update the site.
 ## Photo and publication figures
 
 The profile photo is the supplied original, copied without rewriting or adding metadata.
-CSS crops a 720×720 region at approximately x=560, y=770 from the 1280×2812 source.
-The original face and expression are preserved; an AI-generated alternative was reviewed
-and was not selected.
+CSS frames a 720×900 region at approximately x=480, y=698 from the 1280×2812 source.
+The 4:5 head-and-shoulders composition places the eyes near 38% of the frame height,
+with the face slightly right of center and autumn scenery on the left.
+The same framing scales to desktop and mobile; the original face and expression are preserved.
 
 Publication figures come from the corresponding public papers or author repositories:
 

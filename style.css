@@ -37,8 +37,9 @@ strong { font-weight: 600; }
 .nav-links a[aria-current]::after { content: ""; position: absolute; bottom: -22px; left: 0; right: 0; height: 2px; background: var(--link); }
 .page-layout { max-width: 1100px; padding: 52px 28px 24px; margin: auto; display: grid; grid-template-columns: 235px minmax(0, 1fr); column-gap: 68px; align-items: start; }
 .profile { position: sticky; top: 110px; }
-.portrait { position: relative; width: 220px; aspect-ratio: 1; overflow: hidden; border-radius: 8px; margin-bottom: 23px; background: #e6eeec; }
-.portrait img { position: absolute; width: 177.778%; max-width: none; height: auto; left: -77.778%; top: -106.944%; }
+/* 720 × 900 crop at (480, 698): eyes near 38% height, with autumn scenery on the left. */
+.portrait { position: relative; width: 220px; aspect-ratio: 4 / 5; overflow: hidden; border-radius: 8px; margin-bottom: 23px; background: #e6eeec; }
+.portrait img { position: absolute; width: 177.778%; max-width: none; height: auto; left: -66.667%; top: -77.556%; }
 h1 { font-size: 28px; line-height: 1.2; letter-spacing: -.7px; margin: 0 0 5px; font-weight: 650; }
 .chinese-name { font-size: 16px; color: var(--muted); letter-spacing: 3px; margin-bottom: 16px; }
 .position { font-size: 15px; margin-bottom: 3px; font-weight: 600; }
